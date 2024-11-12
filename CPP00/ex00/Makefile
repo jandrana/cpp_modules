@@ -6,7 +6,7 @@
 #    By: ana-cast <ana-cast@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/12 18:19:01 by ana-cast          #+#    #+#              #
-#    Updated: 2024/11/12 19:30:52 by ana-cast         ###   ########.fr        #
+#    Updated: 2024/11/12 19:49:31 by ana-cast         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ RM = rm -f
 ################################################################################
 
 SRC = megaphone.cpp
-OBJ = $(SRC:.cpp=.o)
+OBJS = $(SRC:.cpp=.o)
 
 ################################################################################
 ##                                    COLORS                                 ##
@@ -57,9 +57,9 @@ head :
 	@echo -e "\t🛠   Compiler: $(CPP)"
 	@echo -e "\t🛠   Flags: $(FLAGS) $(END)\n"
 
-$(NAME) : line $(OBJECTS)
+$(NAME) : line $(OBJS)
 	@echo -e "✦ ---------------------- ✦$(END)"
-	@$(CPP) $(FLAGS) -o $(NAME) $(OBJECTS)
+	@$(CPP) $(FLAGS) -o $(NAME) $(OBJS)
 
 %.o : %.cpp
 	@$(CPP) $(FLAGS) -c $< -o $@
@@ -72,7 +72,7 @@ line :
 
 clean :
 	@printf "\n$(YELLOW) 🗑   Removing objects$(END)"
-	@$(RM) $(OBJECTS)
+	@$(RM) $(OBJS)
 	@echo -e "$(GREEN)\r  ✓  $(RED)Removed  objects from $(NAME) $(END)"
 
 fclean: clean
