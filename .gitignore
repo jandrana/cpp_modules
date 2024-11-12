@@ -2,10 +2,10 @@
 *.d
 
 # Object files
+*.slo
+*.lo
 *.o
-*.ko
 *.obj
-*.elf
 
 # Linker output
 *.ilk
@@ -21,6 +21,7 @@
 *.a
 *.la
 *.lo
+*.lai
 
 # Shared objects (inc. Windows DLLs)
 *.dll
@@ -45,6 +46,7 @@
 # Kernel Module Compile Results
 *.mod*
 *.cmd
+*.smod
 .tmp_versions/
 modules.order
 Module.symvers
@@ -55,3 +57,4 @@ dkms.conf
 .DS_Store
 *.icloud
 .vscode
+.idx
