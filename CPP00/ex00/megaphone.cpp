@@ -6,7 +6,7 @@
 /*   By: ana-cast <ana-cast@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 19:30:47 by ana-cast          #+#    #+#             */
-/*   Updated: 2024/11/12 19:51:29 by ana-cast         ###   ########.fr       */
+/*   Updated: 2024/11/15 15:03:07 by ana-cast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,5 @@ int	main(int argc, char **argv)
 		}
 		std::cout << std::endl;
 	}
+	return (0);
 }
