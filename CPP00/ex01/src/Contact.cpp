@@ -1,0 +1,65 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ana-cast <ana-cast@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/12 20:08:00 by ana-cast          #+#    #+#             */
+/*   Updated: 2024/11/15 23:44:10 by ana-cast         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <Contact.hpp>
+#include <iostream>
+
+Contact::Contact(void) {}
+Contact::~Contact(void) {}
+
+void	Contact::setContact(std::string firstName, std::string lastName, 
+                            std::string nickname, std::string phoneNumber, 
+                            std::string darkestSecret)
+{
+    this->_firstName = firstName;
+    this->_lastName = lastName;
+    this->_nickname = nickname;
+    this->_phoneNumber = phoneNumber;
+    this->_darkestSecret = darkestSecret;
+}
+
+void    Contact::setIndex(int index) { this->_index = index; }
+
+int         Contact::getIndex(void) { return (_index); }
+std::string Contact::getFirstName(void) { return  (this->_firstName); }
+std::string Contact::getlastName(void) { return  (this->_lastName); }
+std::string Contact::getNickname(void) { return  (this->_nickname); }
+std::string Contact::getPhoneNumber(void) { return  (this->_phoneNumber); }
+std::string Contact::getDarkestSecret(void) { return  (this->_darkestSecret); }
+
+
+std::string    Contact::_summaryLen(std::string value)
+{
+    if (value.length() > 10)
+        return (value.substr(0, 9) + ".");
+    return (value);
+}
+
+void    Contact::printSummary(int i)
+{
+    std::cout << std::setw(10) << i << "│";
+    std::cout << std::setw(10) << _summaryLen(_firstName) << "│";
+    std::cout << std::setw(10) << _summaryLen(_lastName) << "│";
+    std::cout << std::setw(10) << _summaryLen(_nickname) << std::endl;
+}
+
+void    Contact::printContact(void)
+{
+    std::cout << " ╔────────────────╗" << std::endl;
+    std::cout << " │  CONTACT INFO  │" << std::endl;
+    std::cout << " ╚────────────────╝" << std::endl;
+    std::cout << "  > First Name: " << _firstName << std::endl;
+    std::cout << "  > Last Name: " << _lastName << std::endl;
+    std::cout << "  > Nickname: " << _nickname << std::endl;
+    std::cout << "  > Phone Number: " << _phoneNumber << std::endl;
+    std::cout << "  > Darkest Secret: " << _darkestSecret << std::endl;
+}
