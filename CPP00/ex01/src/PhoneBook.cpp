@@ -6,13 +6,14 @@
 /*   By: ana-cast <ana-cast@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 20:08:06 by ana-cast          #+#    #+#             */
-/*   Updated: 2024/11/15 23:41:08 by ana-cast         ###   ########.fr       */
+/*   Updated: 2024/11/16 00:21:19 by ana-cast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <PhoneBook.hpp>
 #include <iostream>
 #include <limits>
+#include <cctype>
 
 PhoneBook::PhoneBook() : _index(0), _numContacts(0) {}
 
