@@ -6,14 +6,14 @@
 /*   By: ana-cast <ana-cast@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 20:08:04 by ana-cast          #+#    #+#             */
-/*   Updated: 2024/11/15 23:39:51 by ana-cast         ###   ########.fr       */
+/*   Updated: 2024/11/16 00:07:30 by ana-cast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_HPP
 # define CONTACT_HPP
 
-# include <iomanip>
+# include <string>
 
 class Contact
 {
