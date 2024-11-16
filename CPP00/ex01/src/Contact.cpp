@@ -6,7 +6,7 @@
 /*   By: ana-cast <ana-cast@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 20:08:00 by ana-cast          #+#    #+#             */
-/*   Updated: 2024/11/16 00:06:49 by ana-cast         ###   ########.fr       */
+/*   Updated: 2024/11/16 01:23:59 by ana-cast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,9 @@ std::string    Contact::_summaryLen(std::string value)
 void    Contact::printSummary(int i)
 {
     std::cout << std::setw(10) << i << "│";
-    std::cout << std::setw(10) << _summaryLen(_firstName) << "│";
-    std::cout << std::setw(10) << _summaryLen(_lastName) << "│";
-    std::cout << std::setw(10) << _summaryLen(_nickname) << std::endl;
+    std::cout << std::setw(10) << _summaryLen(getFirstName()) << "│";
+    std::cout << std::setw(10) << _summaryLen(getlastName()) << "│";
+    std::cout << std::setw(10) << _summaryLen(getNickname()) << std::endl;
 }
 
 void    Contact::printContact(void)
@@ -58,9 +58,9 @@ void    Contact::printContact(void)
     std::cout << " ╔────────────────╗" << std::endl;
     std::cout << " │  CONTACT INFO  │" << std::endl;
     std::cout << " ╚────────────────╝" << std::endl;
-    std::cout << "  > First Name: " << _firstName << std::endl;
-    std::cout << "  > Last Name: " << _lastName << std::endl;
-    std::cout << "  > Nickname: " << _nickname << std::endl;
-    std::cout << "  > Phone Number: " << _phoneNumber << std::endl;
-    std::cout << "  > Darkest Secret: " << _darkestSecret << std::endl;
+    std::cout << "  > First Name: " << getFirstName() << std::endl;
+    std::cout << "  > Last Name: " << getlastName() << std::endl;
+    std::cout << "  > Nickname: " << getNickname() << std::endl;
+    std::cout << "  > Phone Number: " << getPhoneNumber() << std::endl;
+    std::cout << "  > Darkest Secret: " << getDarkestSecret() << std::endl;
 }
