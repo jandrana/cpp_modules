@@ -6,7 +6,7 @@
 /*   By: ana-cast <ana-cast@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 20:08:00 by ana-cast          #+#    #+#             */
-/*   Updated: 2024/11/16 01:23:59 by ana-cast         ###   ########.fr       */
+/*   Updated: 2024/11/16 01:33:27 by ana-cast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	Contact::setContact(std::string firstName, std::string lastName,
 
 void    Contact::setIndex(int index) { this->_index = index; }
 
-int         Contact::getIndex(void) { return (_index); }
+int         Contact::getIndex(void) { return (this->_index); }
 std::string Contact::getFirstName(void) { return  (this->_firstName); }
 std::string Contact::getlastName(void) { return  (this->_lastName); }
 std::string Contact::getNickname(void) { return  (this->_nickname); }
