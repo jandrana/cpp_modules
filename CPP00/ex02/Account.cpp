@@ -74,7 +74,6 @@ Account::Account( int initial_deposit )
 // destructor
 Account::~Account(void)
 {
-    //Example: index:7;amount:8942;closed
     _displayTimestamp();
     std::cout << "index:" << _accountIndex << ";";
     std::cout << "amount:" << checkAmount() << ";";
@@ -82,10 +81,13 @@ Account::~Account(void)
 }
 
 //public
-int	Account::getNbAccounts( void ) { return (this->_nbAccounts); };
-int	Account::getTotalAmount( void ) { return (this->_totalAmount); };
-int	Account::getNbDeposits( void ) { return (this->_nbDeposits); };
-int	Account::getNbWithdrawals( void ) { return (this->_nbWithdrawals); };
+int	Account::getNbAccounts( void ) { return (_nbAccounts); }
+int	Account::getTotalAmount( void ) { return (_totalAmount); }
+int	Account::getNbDeposits( void ) { return (_totalNbDeposits); }
+int	Account::getNbWithdrawals( void ) { return (_totalNbWithdrawals); }
+
+int		Account::checkAmount( void ) const { return (this->_amount); }
+
 void    Account::displayAccountsInfos( void )
 {
     _displayTimestamp();
