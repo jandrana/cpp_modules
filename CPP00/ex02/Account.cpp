@@ -100,4 +100,13 @@ void    Account::displayAccountsInfos( void )
 void	Account::makeDeposit( int deposit ) {};
 bool	Account::makeWithdrawal( int withdrawal ) {};
 int		Account::checkAmount( void ) const {};
-void	Account::displayStatus( void ) const {};
+void	Account::displayStatus( void ) const
+{
+    //Example: index:0;amount:42;deposits:0;withdrawals:0
+    _displayTimestamp();
+    std::cout << "index:" << _accountIndex << ";";
+    std::cout << "amount:" << checkAmount() << ";";
+    std::cout << "deposits:" << _nbDeposits << ";";
+    std::cout << "withdrawals:" << _nbWithdrawals << std::endl;
+}
+
