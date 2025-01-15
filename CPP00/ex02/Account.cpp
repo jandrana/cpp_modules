@@ -6,7 +6,7 @@
 /*   By: ana-cast <ana-cast@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 00:00:19 by ana-cast          #+#    #+#             */
-/*   Updated: 2024/11/16 01:41:47 by ana-cast         ###   ########.fr       */
+/*   Updated: 2025/01/15 17:50:26 by ana-cast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,8 @@
 
 /*
 TODO
-    - improve understanding of this-> in variables depending on objects, etc
-    - learn more about getters and setters
-        - clarify private and public methods good practices
-	missing functions (destructor, )
-        - makeDeposit
-        - makeWithdrawal
-        - checkAmount
-        - displayStatus
+    - Before finishing, delete .log file
+    - Make final check for submitting
 
 DONE
     initializing
@@ -32,6 +26,7 @@ DONE
     constructor
     getters
     general total acc info
+    makeWithdrawal (refuse or not withdrawal function)
 */
 
 //private
