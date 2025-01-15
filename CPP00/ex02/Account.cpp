@@ -67,11 +67,19 @@ Account::Account( int initial_deposit )
     _nbWithdrawals = 0; // 4 that acc
     _nbDeposits = 0; // 4 that acc 
     std::cout << "index:" << _accountIndex << ";";
-    std::cout << "amount:" << _amount << ";";
+    std::cout << "amount:" << checkAmount() << ";";
     std::cout << "created" << std::endl;
 }
 
-Account::~Account(void) {}; // destructor
+// destructor
+Account::~Account(void)
+{
+    //Example: index:7;amount:8942;closed
+    _displayTimestamp();
+    std::cout << "index:" << _accountIndex << ";";
+    std::cout << "amount:" << checkAmount() << ";";
+    std::cout << "closed" << std::endl;
+}
 
 //public
 int	Account::getNbAccounts( void ) { return (this->_nbAccounts); };
