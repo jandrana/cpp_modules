@@ -6,7 +6,7 @@
 #    By: user <user@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/12 18:19:01 by ana-cast          #+#    #+#              #
-#    Updated: 2025/06/23 12:09:10 by user             ###   ########.fr        #
+#    Updated: 2025/06/23 12:22:47 by user             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,7 @@ head :
 	@echo -e "\t$(BOLD)Exercise 00$(END)$(MAGENTA)"
 	@echo -e "\t        42MLG: by ana-cast"
 	@echo -e "\tProyect: \033[36m $(NAME) $(MAGENTA)"
-	@echo -e "\tCommands:\033[36m all clean fclean re bonus $(BLUE)"
+	@echo -e "\tCommands:\033[36m all clean fclean re$(BLUE)"
 	@echo -e "\t🛠   Compiler: $(CPP)"
 	@echo -e "\t🛠   Flags: $(FLAGS) $(END)\n"
 
