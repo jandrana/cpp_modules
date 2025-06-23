@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ana-cast <ana-cast@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 20:08:04 by ana-cast          #+#    #+#             */
-/*   Updated: 2024/11/16 00:07:30 by ana-cast         ###   ########.fr       */
+/*   Updated: 2025/06/23 12:52:58 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,25 +23,20 @@ class Contact
 		std::string _nickname;
 		std::string _phoneNumber;
 		std::string _darkestSecret;
-		int			_index;
-		std::string    _summaryLen(std::string value);
+		std::string	_summaryLen(std::string value);
 		
 	public:
 		Contact();
 		~Contact();
 		void	setContact(std::string firstName, std::string lastName,
 				std::string nickname, std::string phoneNumber, std::string darkestSecret);
-		void	setIndex(int index);
-		
-		int			getIndex(void);
+
 		std::string getFirstName(void);
 		std::string getlastName(void);
 		std::string getNickname(void);
 		std::string getPhoneNumber(void);
 		std::string getDarkestSecret(void);
-
-		void    printSummary(int i);
-		void    printContact(void);
+		void    	printSummary(int i);
 };
 
 #endif /* CONTACT_HPP */

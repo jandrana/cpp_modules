@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ana-cast <ana-cast@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 20:07:57 by ana-cast          #+#    #+#             */
-/*   Updated: 2024/11/15 23:43:47 by ana-cast         ###   ########.fr       */
+/*   Updated: 2025/06/20 11:44:58 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ int main(void)
     while (cmd != "EXIT")
     {
         std::cout << " > " << std::flush;
-        if (!std::getline(std::cin, cmd))
-            break ;
+        if (!std::getline(std::cin, cmd, '\n'))
+            return (0);
         if (std::cin.good())
         {
             if (cmd == "HELP" || cmd.empty())

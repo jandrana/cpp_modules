@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ana-cast <ana-cast@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 20:08:06 by ana-cast          #+#    #+#             */
-/*   Updated: 2024/11/16 00:21:19 by ana-cast         ###   ########.fr       */
+/*   Updated: 2025/06/23 13:56:10 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ void    PhoneBook::start(void)
     std::cout << "│  > ADD             │" << std::endl;
     std::cout << "│  > SEARCH          │" << std::endl;
     std::cout << "│  > EXIT            │" << std::endl;
+    std::cout << "│  > HELP            │" << std::endl;
     std::cout << "╚────────────────────╝" << std::endl;
 
 }
@@ -83,6 +84,31 @@ std::string    PhoneBook::_getInput(std::string newField, int type)
     
 }
 
+int    PhoneBook::_checkDigits(std::string str)
+{
+    int i;
+
+    i = -1;
+    while (str[++i])
+    {
+        if (!isdigit(str[i]))
+            return (1);
+    }
+    return (0);
+}
+
+void    PhoneBook::_printContact(Contact contact)
+{
+    std::cout << " ╔────────────────╗" << std::endl;
+    std::cout << " │  CONTACT INFO  │" << std::endl;
+    std::cout << " ╚────────────────╝" << std::endl;
+    std::cout << "  > First Name: " << contact.getFirstName() << std::endl;
+    std::cout << "  > Last Name: " << contact.getlastName() << std::endl;
+    std::cout << "  > Nickname: " << contact.getNickname() << std::endl;
+    std::cout << "  > Phone Number: " << contact.getPhoneNumber() << std::endl;
+    std::cout << "  > Darkest Secret: " << contact.getDarkestSecret() << std::endl;
+}
+
 void    PhoneBook::addContact(void)
 {
     std::string firstName, lastName, nickname, phoneNumber, darkestSecret;
@@ -116,27 +142,11 @@ void    PhoneBook::addContact(void)
     }
 }
 
-/*void    PhoneBook::testmode(void)
-{
-    int numTest;
-
-    std::cout << "How Many Contacts do you want to create for testing?: " << std::flush;
-    if (!(std::cin >> numTest) || numTest < 0 || numTest >= 8)
-        return ;
-    std::cin.clear();
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    while (numTest--)
-    {
-        _contacts[_index].setContact("Nombre", "Apellido", "Apodo", "123123123", "Hola que tal todo bieeeeen?? :D");
-        _index = (_index + 1) % MAX_CONTACTS;
-        _numContacts = std::min(_numContacts + 1, MAX_CONTACTS);
-    }
-}*/
-
 void    PhoneBook::searchContact(void)
 {
     int i;
     int index;
+    std::string input;
 
     if (_numContacts == 0)
     {
@@ -155,7 +165,10 @@ void    PhoneBook::searchContact(void)
         std::cout << "\n  NOTE: To exit the search type 9 as index" << std::endl;
         std::cout << "╚───────────────────────────────────────────╝" << std::endl;
         std::cout << "Enter the index of the contact to view (9 to stop Search): " << std::flush;
-        while (!(std::cin >> index) || ((index < 0 || index >= _numContacts) && index != 9))
+        if (!std::getline(std::cin, input))
+            return ;
+        index = std::atoi(input.c_str());
+        while (_checkDigits(input) || ((index < 0 || index >= _numContacts) && index != 9))
         {
             if (std::cin.eof())
             {
@@ -163,13 +176,14 @@ void    PhoneBook::searchContact(void)
                 return ;
             }
             std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            std::cout << "Invalid index. Try again with a valid index: " << std::flush;        
+            std::cout << "Invalid index. Try again with a valid index: " << std::flush;
+            if (!std::getline(std::cin, input))
+                return ;
+            index = std::atoi(input.c_str());
         }
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         if (index != 9)
         {
-            _contacts[index].printContact();
+            _printContact(_contacts[index]);
             return ;
         }
         std::cin.clear();

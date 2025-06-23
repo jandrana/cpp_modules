@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ana-cast <ana-cast@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 20:08:08 by ana-cast          #+#    #+#             */
-/*   Updated: 2024/11/15 23:43:29 by ana-cast         ###   ########.fr       */
+/*   Updated: 2025/06/23 13:59:30 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PHONEBOOK_HPP
 
 # include <Contact.hpp>
+# include <cstdlib>
 
 # define MAX_CONTACTS 8
 
@@ -24,13 +25,14 @@ class   PhoneBook
         int     _index;
         int     _numContacts;
         std::string _getInput(std::string newField, int type);
-        int    _checkInput(std::string input, int type);
+        int     _checkInput(std::string input, int type);
+        int     _checkDigits(std::string str);
+        void    _printContact(Contact contact);
 
     public:
         PhoneBook();
         ~PhoneBook();
         void    start(void);
-        //void     testmode(void);
         void    addContact(void);
         void    searchContact(void);
         void    exitPhoneBook(void);

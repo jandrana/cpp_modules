@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ana-cast <ana-cast@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 20:08:00 by ana-cast          #+#    #+#             */
-/*   Updated: 2024/11/16 01:33:27 by ana-cast         ###   ########.fr       */
+/*   Updated: 2025/06/23 12:49:52 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,6 @@ void	Contact::setContact(std::string firstName, std::string lastName,
     this->_darkestSecret = darkestSecret;
 }
 
-void    Contact::setIndex(int index) { this->_index = index; }
-
-int         Contact::getIndex(void) { return (this->_index); }
 std::string Contact::getFirstName(void) { return  (this->_firstName); }
 std::string Contact::getlastName(void) { return  (this->_lastName); }
 std::string Contact::getNickname(void) { return  (this->_nickname); }
@@ -51,16 +48,4 @@ void    Contact::printSummary(int i)
     std::cout << std::setw(10) << _summaryLen(getFirstName()) << "│";
     std::cout << std::setw(10) << _summaryLen(getlastName()) << "│";
     std::cout << std::setw(10) << _summaryLen(getNickname()) << std::endl;
-}
-
-void    Contact::printContact(void)
-{
-    std::cout << " ╔────────────────╗" << std::endl;
-    std::cout << " │  CONTACT INFO  │" << std::endl;
-    std::cout << " ╚────────────────╝" << std::endl;
-    std::cout << "  > First Name: " << getFirstName() << std::endl;
-    std::cout << "  > Last Name: " << getlastName() << std::endl;
-    std::cout << "  > Nickname: " << getNickname() << std::endl;
-    std::cout << "  > Phone Number: " << getPhoneNumber() << std::endl;
-    std::cout << "  > Darkest Secret: " << getDarkestSecret() << std::endl;
 }
