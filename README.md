@@ -11,10 +11,10 @@ Each module has its dedicated folder and README, providing context and guidance 
 | Module        | Description                                                         | Status        |
 |---------------|---------------------------------------------------------------------|---------------|
 | **Module 00** | Namespaces, Classes, Member Functions, and Basic Concepts           | ✅ Done |
-| **Module 01** | Memory Allocation, Pointers, and References                         | 🔄 In Progress |
-| **Module 02** | Ad-hoc Polymorphism, Operator Overloading, and Orthodox Canonical Class Form | 🔲 Not Started |
-| **Module 03** | Inheritance                                                         | 🔲 Not Started |
-| **Module 04** | Subtype Polymorphism, Abstract Classes, Interfaces                  | 🔲 Not Started |
+| **Module 01** | Memory Allocation, Pointers, and References                         | ✅ Done |
+| **Module 02** | Ad-hoc Polymorphism, Operator Overloading, and Orthodox Canonical Class Form | ✅ Done |
+| **Module 03** | Inheritance                                                         | ✅ Done |
+| **Module 04** | Subtype Polymorphism, Abstract Classes, Interfaces                  | ✅ Done |
 | ...           |                                                                     |               |
 
 ### Module 00: Namespaces, Classes, Member Functions, and Basic Concepts
